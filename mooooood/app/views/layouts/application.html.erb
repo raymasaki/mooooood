@@ -9,8 +9,21 @@
 <body>
 
   <%= link_to "BACK TO ALL", moods_path, class: "all_moods" %><br>
-  <%= link_to "NEW MOOD", new_mood_path, class: "new_mood" %><br>
-  <%= link_to "SIGN UP", new_user_path, class: "signup" %><br>
+
+  <% if logged_in %>
+    <li id="create">
+      <%= link_to "NEW MOOD", new_mood_path, class: "new_mood" %>
+    </li>
+    <li id="logout">
+      <%= link_to 'Logout', logout_path, :method => :delete %>
+    </li>
+    <li>Welcome, <%= current_user.username.capitalize %></li>
+  <% else %>
+    <li id="login">
+      <%= link_to "LOG IN", login_path, class: "login" %>
+    </li>
+    <li><%= link_to "SIGN UP", new_user_path, class: "signup" %></li>
+  <% end %>
 
 <%= yield %>
 
