@@ -1,3 +1,11 @@
-<% @moods.each do |mood| %>
-  <%= render partial: 'mood', locals: {mood: mood} %>
+<% if logged_in %>
+  <!-- If you're logged in show everything -->
+  <% @moods.each do |mood| %>
+    <%= render partial: 'mood', locals: {mood: mood} %>
+  <% end %>
+<% else %>
+  <!-- If you're not logged in show only moods set to public -->
+  <% @moods_private.each do |mood| %>
+    <%= render partial: 'mood', locals: {mood: mood} %>
+  <% end %>
 <% end %>

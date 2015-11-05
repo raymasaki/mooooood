@@ -4,6 +4,24 @@
 body {
   background: #F7F9F8;
 }
+
+#about {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #FAF5F7;
+  display: none;
+}
+
+.show {
+  display: block !important;
+}
+
+.about-btn, .close-btn {
+  cursor: pointer;
+  color: red;
+}
+
 .circle {
   width: 32px;
   height: 32px;

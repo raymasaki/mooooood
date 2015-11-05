@@ -12,5 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
+
+$(document).ready(function () {
+
+  $('.about-btn').click(function () {
+    $('#about').addClass('show');
+  });
+
+  $('.close-btn').click(function () {
+    $('#about').removeClass('show');
+  });
+
+});
