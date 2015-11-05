@@ -1,0 +1,89 @@
+<%= form_for @mood do |f| %>
+
+<p>
+  <%= f.label :user_id, "User ID: " %><br/>
+  <%= f.text_field :user_id %>
+</p>
+<p>
+  <%= f.label :emotion, "Emotion: " %><br/>
+
+  <%= f.label :emotion, "Chill: " %><br/>
+  <%= f.radio_button :emotion, "chill" %><br/>
+
+  <%= f.label :emotion, "Cool: " %><br/>
+  <%= f.radio_button :emotion, "cool" %><br/>
+
+  <%= f.label :emotion, "Drunk: " %><br/>
+  <%= f.radio_button :emotion, "drunk" %><br/>
+
+  <%= f.label :emotion, "Funny: " %><br/>
+  <%= f.radio_button :emotion, "funny" %><br/>
+
+  <%= f.label :emotion, "Meh: " %><br/>
+  <%= f.radio_button :emotion, "meh" %><br/>
+
+  <%= f.label :emotion, "Happy: " %><br/>
+  <%= f.radio_button :emotion, "happy" %><br/>
+
+  <%= f.label :emotion, "Awesome: " %><br/>
+  <%= f.radio_button :emotion, "awesome" %><br/>
+
+  <%= f.label :emotion, "Amazing: " %><br/>
+  <%= f.radio_button :emotion, "amazing" %><br/>
+
+  <%= f.label :emotion, "Excited: " %><br/>
+  <%= f.radio_button :emotion, "excited" %><br/>
+
+  <%= f.label :emotion, "Surprised: " %><br/>
+  <%= f.radio_button :emotion, "surprised" %><br/>
+
+  <%= f.label :emotion, "Relieved: " %><br/>
+  <%= f.radio_button :emotion, "relieved" %><br/>
+
+  <%= f.label :emotion, "Loved: " %><br/>
+  <%= f.radio_button :emotion, "loved" %><br/>
+
+  <%= f.label :emotion, "Sad: " %><br/>
+  <%= f.radio_button :emotion, "sad" %><br/>
+
+  <%= f.label :emotion, "Bad: " %><br/>
+  <%= f.radio_button :emotion, "bad" %><br/>
+
+  <%= f.label :emotion, "Bored: " %><br/>
+  <%= f.radio_button :emotion, "bored" %><br/>
+
+  <%= f.label :emotion, "Sick: " %><br/>
+  <%= f.radio_button :emotion, "sick" %><br/>
+
+  <%= f.label :emotion, "Tired: " %><br/>
+  <%= f.radio_button :emotion, "tired" %><br/>
+
+  <%= f.label :emotion, "Annoyed: " %><br/>
+  <%= f.radio_button :emotion, "annoyed" %><br/>
+
+  <%= f.label :emotion, "Hungry: " %><br/>
+  <%= f.radio_button :emotion, "hungry" %><br/>
+
+  <%= f.label :emotion, "Confused: " %><br/>
+  <%= f.radio_button :emotion, "confused" %><br/>
+
+  <%= f.label :emotion, "Sleepy: " %><br/>
+  <%= f.radio_button :emotion, "sleepy" %><br/>
+
+  <%= f.label :emotion, "Sorry: " %><br/>
+  <%= f.radio_button :emotion, "sorry" %><br/>
+
+  <%= f.label :emotion, "Pissed: " %><br/>
+  <%= f.radio_button :emotion, "pissed" %><br/>
+
+  <%= f.label :emotion, "Lonely: " %><br/>
+  <%= f.radio_button :emotion, "lonely" %>
+</p>
+<p>
+  <%= f.label :is_private, "For Members Only: " %><br/>
+  <%= f.check_box :is_private %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
