@@ -1,0 +1,5 @@
+<div class="mood <%= mood.emotion %>">
+  <div class="circle"></div>
+  <p><%= mood.user.username %> felt <%= mood.emotion %><br>
+  <span class="timestamp">at <%= (mood.created_at).strftime("%I:%M %p") %></span></p>
+</div>

@@ -1,0 +1,84 @@
+// Place all the styles related to the Moods controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background: #F7F9F8;
+}
+.circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background: #efefef;
+}
+.chill .circle {
+  background: #A2C5E2;
+}
+.sad .circle {
+  background: #93A5B4;
+}
+.cool .circle {
+  background: #AECCD2;
+}
+.bad .circle {
+  background: #9FAFB0;
+}
+.drunk .circle {
+  background: #BAD4C1;
+}
+.bored .circle {
+  background: #A3B0A6;
+}
+.funny .circle {
+  background: #C6DBB7;
+}
+.sick .circle {
+  background: #A7B39E;
+}
+.meh .circle {
+  background: #CFE1A5;
+}
+.tired .circle {
+  background: #ACB595;
+}
+.happy .circle {
+  background: #D9E796;
+}
+.annoyed .circle {
+  background: #B3BA90;
+}
+.awesome .circle {
+  background: #DCD795;
+}
+.hungry .circle {
+  background: #B6B18E;
+}
+.amazing .circle {
+  background: #E0C393;
+}
+.confused .circle {
+  background: #B5A58C;
+}
+.excited .circle {
+  background: #E2B18E;
+}
+.sleepy .circle {
+  background: #B7998A;
+}
+.surprised .circle {
+  background: #E79F8F;
+}
+.sorry .circle {
+  background: #B89089;
+}
+.relieved .circle {
+  background: #E9898A;
+}
+.pissed .circle {
+  background: #B88788;
+}
+.loved .circle {
+  background: #E988A3;
+}
+.lonely .circle {
+  background: #BB869D;
+}
