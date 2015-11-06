@@ -11,6 +11,11 @@ body {
   display: none;
 }
 
+.mood {
+  animation-duration: .5s;
+  animation-delay: .1s;
+}
+
 .hour {
   position: absolute;
   width: 100%;

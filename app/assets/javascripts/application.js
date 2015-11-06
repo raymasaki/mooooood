@@ -14,10 +14,13 @@
 //= require jquery_ujs
 //= require velocity.min.js
 //= require velocity.ui.min.js
+//= require wow.min.js
 //= require_tree .
 
 
 $(document).ready(function() {
+
+  new WOW().init();
 
   $('body').velocity({
     opacity: [1, 0],
