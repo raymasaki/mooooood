@@ -16,6 +16,8 @@
 
 $(document).ready(function () {
 
+
+  // Clicking on the ? link
   $('.about-btn').click(function () {
     $('#about').addClass('show');
   });
@@ -23,5 +25,24 @@ $(document).ready(function () {
   $('.close-btn').click(function () {
     $('#about').removeClass('show');
   });
+
+  var $moods = $('.mood');
+
+  $moods.each( function (index, mood) {
+    var h = $(mood).attr('data-hour');
+    var m = $(mood).attr('data-min');
+    var pos = (h * 400) + (m / 60) * 400 + Math.random() * 200;
+    $(mood).css('top', pos);
+    // $(mood).attr('data-stellar-ratio', Math.random() + 0.5);
+  });
+
+  var $height = $(document).height();
+
+  for (var i = 0; i < $height; i += 400) {
+    var $hr = $('<hr class="line" style="top:' + i + 'px;">');
+    $('body').append($hr);
+  }
+
+  $(window).stellar();
 
 });

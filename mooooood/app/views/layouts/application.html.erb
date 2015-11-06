@@ -4,6 +4,8 @@
   <title>Mooooood</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -15,8 +17,7 @@
   </section>
 
   <h1 class="logo">MOOOOOOD<span class="about-btn">?</span></h1>
-
-  <%= link_to "BACK TO ALL", moods_path, class: "all_moods" %><br>
+  <h1 class="current-date"><%= Date.today.strftime("%b %d, %Y") %></h1>
 
   <% if logged_in %>
     <li id="create">

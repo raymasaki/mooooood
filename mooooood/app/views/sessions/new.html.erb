@@ -1,18 +1,17 @@
+<%= link_to "BACK TO ALL", moods_path, class: "all_moods" %><br>
+
 <%= form_for(:session, url: login_path) do |f| %>
 
   <p>
-    <%= f.label :username, "Username: " %>
+    <%= f.label :username, "Username: " %><br>
     <%= f.text_field :username %>
   </p>
 
   <p>
-    <%= f.label :password, "Password: " %>
+    <%= f.label :password, "Password: " %><br>
     <%= f.password_field :password %>
   </p>
 
   <%= f.submit "Log In" %>
 
 <% end %>
-
-<p>New user?
-  <%= link_to "Sign up", new_user_path %></p>

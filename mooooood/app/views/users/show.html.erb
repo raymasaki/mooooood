@@ -1,2 +1,2 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1>Hi <%= @user.username.capitalize %></h1>
+<%= link_to "Delete Account", user_path(@user), method: :delete, data: {confirm: "Are you sure?"} %>

@@ -3,6 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
   background: #F7F9F8;
+  font-family: 'Times NR Condensed', sans-serif;
+  height: 9600px;
+}
+
+.line {
+  position: absolute;
+  border: 0;
+  width: 100%;
+  color: #EAEBE9;
+  background-color: #EAEBE9;
+  height: 2px;
+  z-index: -1;
 }
 
 #about {
@@ -11,6 +23,7 @@ body {
   height: 100%;
   background: #FAF5F7;
   display: none;
+  z-index: 100;
 }
 
 .show {
@@ -27,6 +40,7 @@ body {
   height: 32px;
   border-radius: 16px;
   background: #efefef;
+  z-index: 50;
 }
 .chill .circle {
   background: #A2C5E2;
@@ -99,4 +113,83 @@ body {
 }
 .lonely .circle {
   background: #BB869D;
+}
+
+.mood {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.chill {
+  left: 1%;
+}
+.sad {
+  left: 4%;
+}
+.cool {
+  left: 8%;
+}
+.bad {
+  left: 12%;
+}
+.drunk {
+  left: 16%;
+}
+.bored {
+  left: 20%;
+}
+.funny {
+  left: 24%;
+}
+.sick {
+  left: 28%;
+}
+.meh {
+  left: 32%;
+}
+.tired {
+  left: 36%;
+}
+.happy {
+  left: 40%;
+}
+.annoyed {
+  left: 44%;
+}
+.awesome {
+  left: 48%;
+}
+.hungry {
+  left: 52%;
+}
+.amazing {
+  left: 56%;
+}
+.confused {
+  left: 60%;
+}
+.excited {
+  left: 64%;
+}
+.sleepy {
+  left: 68%;
+}
+.surprised {
+  left: 72%;
+}
+.sorry {
+  left: 76%;
+}
+.relieved {
+  left: 80%;
+}
+.pissed {
+  left: 84%;
+}
+.loved {
+  left: 88%;
+}
+.lonely {
+  left: 92%;
 }
