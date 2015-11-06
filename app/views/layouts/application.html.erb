@@ -23,23 +23,25 @@
     <strong>SCROLL TO TOP</strong>
   </a>
 
+  <h1 class="current-date">
+    <strong>
+      <%= Date.today.strftime("%b %d %Y") %>
+    </strong>
+  </h1>
+
   <section id="content">
     <%= yield %>
   </section>
 
   <header>
-    <h1 class="logo">
-      <a href="<%= root_path %>"><strong>MOOOOOOD</strong></a>
+    <div class="logo">
       <span class="about-btn">
         <strong>?</strong>
       </span>
-    </h1>
-
-    <h1 class="current-date">
-      <strong>
-        <%= Date.today.strftime("%b %d %Y") %>
-      </strong>
-    </h1>
+      <h1>
+        <a href="<%= root_path %>"><strong>MOOOOOOD</strong></a>
+      </h1>
+    </div>
 
     <% if logged_in %>
       <li id="create">

@@ -25,7 +25,7 @@ header {
   position: fixed;
   width: 100%;
   z-index: 500;
-  height: 100%;
+  top: 0;
 }
 
 header > .logo {
@@ -33,18 +33,27 @@ header > .logo {
   line-height: 96px;
   letter-spacing: -2px;
   text-align: center;
+  width: 268px;
+  margin: 0 auto;
+  position: relative;
 }
 
-header > h1.current-date {
+header > .logo a {
+  text-decoration: none;
+  color: #201614;
+}
+
+h1.current-date {
   font-size: 96px;
   line-height: 96px;
   letter-spacing: -2px;
   text-align: center;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   text-align: center;
   pointer-events: none;
+  z-index: 500;
 }
 
 header > ul.userlinks {
@@ -86,8 +95,27 @@ a.scroll-top {
 
 
 
+
 ////////////// ABOUT //////////////
 
+
+span.about-btn {
+  font-size: 24px;
+  color: #C2C0BF;
+  display: inline-block;
+  line-height: 24px;
+  width: 32px;
+  border-radius: 18px;
+  border: 2px solid #C2C0BF;
+  position: absolute;
+  right: -48px;
+  padding-top: 4px;
+  top: 16px;
+}
+
+span.about-btn > strong {
+  margin-left: -2px;
+}
 
 #about {
   position: fixed;
@@ -105,6 +133,14 @@ a.scroll-top {
 .about-btn, .close-btn {
   cursor: pointer;
   color: red;
+}
+
+
+////////////// FORMS //////////////
+
+.form {
+  width: 60%;
+  margin-top: 20%;
 }
 
 
