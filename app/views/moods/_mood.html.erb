@@ -3,7 +3,7 @@
 <!-- <div class="mood <%= mood.emotion %>" data-hour="<%= mood.created_at.strftime("%H").to_i %>" data-min="<%= mood.created_at.strftime("%M").to_i %>" data-sr="wait .2s, enter bottom, move 100px over .5s"> -->
 <!-- <div class="mood <%= mood.emotion %>" data-hour="<%= mood.created_at.strftime("%H").to_i %>" data-min="<%= mood.created_at.strftime("%M").to_i %>"> -->
 
-<div class="mood <%= mood.emotion %> wow fadeInUp" data-hour="<%= mood.created_at.strftime("%H").to_i %>" data-min="<%= mood.created_at.strftime("%M").to_i %>">
+<div class="mood <%= mood.emotion %> wow fadeInUpBig" data-hour="<%= mood.created_at.strftime("%H").to_i %>" data-min="<%= mood.created_at.strftime("%M").to_i %>">
   <div class="circle"></div>
   <p><%= mood.user.username.capitalize %> felt <%= mood.emotion %><br>
   <span class="timestamp">at <%= (mood.created_at).strftime("%I:%M %p") %></span></p>

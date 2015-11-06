@@ -1,40 +1,74 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Mooooood</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
-  <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+      <%= csrf_meta_tags %>
 </head>
+
 <body class="<%= body_class %>">
 
   <section id="about">
     <span class="close-btn">CLOSE</span>
-    <p><strong>MOOOOOOD</strong> is a generative infographic created by its contributors. You can get a sense for how people are feeling at all times of the day.</p>
-    <p class="instructions">If you want to contribute, <strong>SIGN UP</strong> for an account and click on the <strong>NEW MOOD</strong> button</p>
+    <p>
+      <strong>MOOOOOOD</strong> is a generative infographic created by its contributors. You can get a sense for how people are feeling at all times of the day.</p>
+    <p class="instructions">If you want to contribute,
+      <strong>SIGN UP</strong> for an account and click on the
+      <strong>NEW MOOD</strong> button</p>
   </section>
 
-  <h1 class="logo">MOOOOOOD<span class="about-btn">?</span></h1>
-  <h1 class="current-date"><%= Date.today.strftime("%b %d, %Y") %></h1>
+  <a href="#" class="scroll-top">
+    <strong>SCROLL TO TOP</strong>
+  </a>
 
-  <% if logged_in %>
-    <li id="create">
-      <%= link_to "NEW MOOD", new_mood_path, class: "new_mood" %>
-    </li>
-    <li id="logout">
-      <%= link_to 'LOG OUT', logout_path, :method => :delete %>
-    </li>
-    <li>Welcome, <a href="<%= user_path(current_user) %>"><%= current_user.username.capitalize %></a></li>
-  <% else %>
-    <li id="login">
-      <%= link_to "LOG IN", login_path, class: "login" %>
-    </li>
-    <li><%= link_to "SIGN UP", new_user_path, class: "signup" %></li>
-  <% end %>
+  <section id="content">
+    <%= yield %>
+  </section>
 
-<%= yield %>
+  <header>
+    <h1 class="logo">
+      <a href="<%= root_path %>"><strong>MOOOOOOD</strong></a>
+      <span class="about-btn">
+        <strong>?</strong>
+      </span>
+    </h1>
 
-<script src='http://scrollrevealjs.org/js/scrollReveal.min.js?ver=2.0.1'></script>
-<script>window.scrollReveal = new scrollReveal();</script>
+    <h1 class="current-date">
+      <strong>
+        <%= Date.today.strftime("%b %d %Y") %>
+      </strong>
+    </h1>
+
+    <% if logged_in %>
+      <li id="create">
+        <%= link_to "NEW MOOD", new_mood_path, class: "new_mood" %>
+      </li>
+      <li id="logout">
+        <%= link_to 'LOG OUT', logout_path, :method => :delete %>
+      </li>
+      <li>Welcome,
+        <a href="<%= user_path(current_user) %>">
+          <%= current_user.username.capitalize %>
+        </a>
+      </li>
+      <% else %>
+        <ul class="userlinks">
+          <li id="login">
+            <strong>
+              <%= link_to "LOG IN", login_path, class: "login" %>
+            </strong>
+          </li>
+          <li>
+            <strong>
+              <%= link_to "SIGN UP", new_user_path, class: "signup" %>
+            </strong>
+          </li>
+        </ul>
+        <% end %>
+  </header>
+
 </body>
+
 </html>

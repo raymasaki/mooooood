@@ -1,8 +1,8 @@
 class MoodsController < ApplicationController
   def index
-    @moods = Mood.all
+    # @moods = Mood.all
     @moods = Mood.where("created_at >= ?", DateTime.now.at_beginning_of_day.utc..Time.now.utc)
-    # @moods_private = Mood.where("is_private = false")
+    @moods_private = Mood.where("is_private = false")
     # @moods_private = Mood.where({ created_at: Time.zone.now.beginning_of_day, is_private: false })
   end
 

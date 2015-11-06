@@ -41,11 +41,15 @@ $(document).ready(function() {
   });
 
   var $moods = $('.mood');
+  // hour height
+  var h_height = 200;
+
+  $('body.moods-index').css('height', h_height * 24);
 
   $moods.each(function(index, mood) {
     var h = $(mood).attr('data-hour');
     var m = $(mood).attr('data-min');
-    var pos = (h * 400) + (m / 60) * 400 + Math.random() * 25;
+    var pos = (h * h_height) + (m / 60) * h_height + Math.random() * 25;
     $(mood).css({
       'top': pos,
       // 'opacity': Math.random() + 0.4
@@ -53,14 +57,45 @@ $(document).ready(function() {
     // $(mood).attr('data-stellar-ratio', Math.random() + 1);
   });
 
+
+  // generate hour lines
   var $height = $(document).height();
 
-  for (var i = 400; i < $height; i += 400) {
+  for (var i = h_height; i < $height; i += h_height) {
     var $hour = $('<div class="hour" style="top:' + i + 'px;">');
-    $hour.text((i / 400) + ":00");
+    $hour.html("<strong>" + i / h_height + ":00</strong>");
     var $hr = $('<hr class="line">');
     $hour.append($hr);
     $('body').append($hour);
   }
+
+  function autoScroll() {
+      window.scrollBy(0, scrollSpeed);
+  }
+
+  // if page is moods-index then autoscroll
+  // inspired by this: http://codepen.io/yvalentin/pen/raoMGQ/
+
+  if ($("body").hasClass("moods-index")) {
+    var scrollSpeed = 1;
+    var scrollDelay = 10;
+
+    var scrollInterval = setInterval(autoScroll, scrollDelay);
+  }
+
+  // back to top button
+
+  $(window).scroll(function(){
+		if ($(this).scrollTop() > 400) {
+			$('.scroll-top').addClass('visible');
+		} else {
+			$('.scroll-top').removeClass('visible');
+		}
+	});
+
+	//Click event to scroll to top
+	$('.scroll-top').click(function(){
+    $('html, body').velocity("scroll", { duration: 1500, easing: [0.44, 0.45, 0.42,1] });
+	});
 
 });

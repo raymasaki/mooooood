@@ -1,18 +1,126 @@
 // Place all the styles related to the Moods controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+////////////// GLOBAL //////////////
 body {
   background: #F7F9F8;
+  // temporary until webfont
   font-family: 'Times NR Condensed', sans-serif;
   opacity: 0;
+  font-size: 18px;
+  line-height: 22px;
+  color: #201614;
 }
+
+strong {
+  font-family: 'ITCFranklinGothicStd-DmXCp', sans-serif;
+}
+
+
+
+////////////// HEADER //////////////
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+  height: 100%;
+}
+
+header > .logo {
+  font-size: 96px;
+  line-height: 96px;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+header > h1.current-date {
+  font-size: 96px;
+  line-height: 96px;
+  letter-spacing: -2px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+header > ul.userlinks {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+header > ul.userlinks > li {
+  display: inline;
+  list-style: none;
+}
+
+header > ul.userlinks > li a {
+  text-decoration: none;
+  color: #201614;
+}
+
+li#login::after {
+  content: "|";
+  color: #C2C0BF;
+}
+
+a.scroll-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 800;
+  opacity: 0;
+  text-decoration: none;
+  color: #201614;
+  transition: all .4s;
+}
+
+.visible {
+  opacity: 1 !important;
+  transition: all .25s;
+}
+
+
+
+////////////// ABOUT //////////////
+
+
+#about {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #FAF5F7;
+  display: none;
+  z-index: 1000;
+}
+
+.show {
+  display: block !important;
+}
+
+.about-btn, .close-btn {
+  cursor: pointer;
+  color: red;
+}
+
+
+////////////// MOODS //////////////
+
 
 .moods-new .hour, .users-new .hour, .sessions-new .hour {
   display: none;
 }
 
+.moods-new .current-date, .users-new .current-date, .sessions-new .current-date {
+  display: none;
+}
+
 .mood {
-  animation-duration: .5s;
+  animation-duration: 1s;
   animation-delay: .1s;
 }
 
@@ -27,24 +135,6 @@ body {
   color: #EAEBE9;
   background-color: #EAEBE9;
   height: 2px;
-}
-
-#about {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: #FAF5F7;
-  display: none;
-  z-index: 100;
-}
-
-.show {
-  display: block !important;
-}
-
-.about-btn, .close-btn {
-  cursor: pointer;
-  color: red;
 }
 
 .circle {
