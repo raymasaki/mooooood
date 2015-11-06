@@ -4,11 +4,9 @@
   <title>Mooooood</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= body_class %>">
 
   <section id="about">
     <span class="close-btn">CLOSE</span>
@@ -36,5 +34,7 @@
 
 <%= yield %>
 
+<script src='http://scrollrevealjs.org/js/scrollReveal.min.js?ver=2.0.1'></script>
+<script>window.scrollReveal = new scrollReveal();</script>
 </body>
 </html>

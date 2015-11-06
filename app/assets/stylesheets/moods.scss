@@ -4,17 +4,24 @@
 body {
   background: #F7F9F8;
   font-family: 'Times NR Condensed', sans-serif;
-  height: 9600px;
+  opacity: 0;
+}
+
+.moods-new .hour, .users-new .hour, .sessions-new .hour {
+  display: none;
+}
+
+.hour {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
 }
 
 .line {
-  position: absolute;
   border: 0;
-  width: 100%;
   color: #EAEBE9;
   background-color: #EAEBE9;
   height: 2px;
-  z-index: -1;
 }
 
 #about {
