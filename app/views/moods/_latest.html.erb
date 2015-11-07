@@ -1,0 +1,5 @@
+<div class="mood <%= mood.emotion %> wow fadeInUpBig" data-hour="<%= Time.now.strftime("%H").to_i - mood.created_at.strftime("%H").to_i %>" data-min="<%= Time.now.strftime("%M").to_i - mood.created_at.strftime("%M").to_i %>">
+  <div class="circle"></div>
+  <p><%= mood.user.username.capitalize %> felt <%= mood.emotion %><br>
+  <span class="timestamp"><%= time_ago_in_words(mood.created_at) %> ago</span></p>
+</div>

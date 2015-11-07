@@ -6,6 +6,11 @@ class MoodsController < ApplicationController
     # @moods_private = Mood.where({ created_at: Time.zone.now.beginning_of_day, is_private: false })
   end
 
+  def latest
+    @moods = Mood.where("created_at >= ?", DateTime.now.at_beginning_of_day.utc..Time.now.utc)
+    @moods_private = Mood.where("is_private = false")
+  end
+
   def new
     @mood = current_user.moods.build
   end

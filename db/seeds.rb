@@ -19,38 +19,99 @@ User.create(username: "kate", password: "123", password_confirmation: "123")
 User.create(username: "will", password: "123", password_confirmation: "123")
 User.create(username: "jason", password: "123", password_confirmation: "123")
 
-Mood.create(emotion: "chill", is_private: false, user_id: 1)
-Mood.create(emotion: "loved", is_private: false, user_id: 1)
 
-Mood.create(emotion: "cool", is_private: false, user_id: 2)
-Mood.create(emotion: "relieved", is_private: false, user_id: 2)
+chill = Mood.create(emotion: "chill", is_private: false, user_id: 1)
+chill.created_at = (rand*12).hours.ago
+chill.save
 
-Mood.create(emotion: "drunk", is_private: false, user_id: 3)
-Mood.create(emotion: "surprised", is_private: false, user_id: 3)
+loved = Mood.create(emotion: "loved", is_private: false, user_id: 1)
+loved.created_at = (rand*12).hours.ago
+loved.save
 
-Mood.create(emotion: "funny", is_private: false, user_id: 4)
-Mood.create(emotion: "excited", is_private: false, user_id: 4)
+cool = Mood.create(emotion: "cool", is_private: false, user_id: 2)
+cool.created_at = (rand*12).hours.ago
+cool.save
 
-Mood.create(emotion: "meh", is_private: false, user_id: 5)
-Mood.create(emotion: "amazing", is_private: false, user_id: 5)
+relieved = Mood.create(emotion: "relieved", is_private: false, user_id: 2)
+relieved.created_at = (rand*12).hours.ago
+relieved.save
 
-Mood.create(emotion: "happy", is_private: false, user_id: 6)
-Mood.create(emotion: "awesome", is_private: false, user_id: 6)
+drunk = Mood.create(emotion: "drunk", is_private: false, user_id: 3)
+drunk.created_at = (rand*12).hours.ago
+drunk.save
 
-Mood.create(emotion: "sad", is_private: false, user_id: 7)
-Mood.create(emotion: "lonely", is_private: false, user_id: 7)
+surprised = Mood.create(emotion: "surprised", is_private: false, user_id: 3)
+surprised.created_at = (rand*12).hours.ago
+surprised.save
 
-Mood.create(emotion: "bad", is_private: false, user_id: 8)
-Mood.create(emotion: "pissed", is_private: false, user_id: 8)
+funny = Mood.create(emotion: "funny", is_private: false, user_id: 4)
+funny.created_at = (rand*12).hours.ago
+funny.save
 
-Mood.create(emotion: "bored", is_private: false, user_id: 9)
-Mood.create(emotion: "sorry", is_private: false, user_id: 9)
+excited = Mood.create(emotion: "excited", is_private: false, user_id: 4)
+excited.created_at = (rand*12).hours.ago
+excited.save
 
-Mood.create(emotion: "sick", is_private: false, user_id: 10)
-Mood.create(emotion: "sleepy", is_private: false, user_id: 10)
+meh = Mood.create(emotion: "meh", is_private: false, user_id: 5)
+meh.created_at = (rand*12).hours.ago
+meh.save
 
-Mood.create(emotion: "tired", is_private: false, user_id: 11)
-Mood.create(emotion: "confused", is_private: false, user_id: 11)
+amazing = Mood.create(emotion: "amazing", is_private: false, user_id: 5)
+amazing.created_at = (rand*12).hours.ago
+amazing.save
 
-Mood.create(emotion: "annoyed", is_private: false, user_id: 12)
-Mood.create(emotion: "hungry", is_private: false, user_id: 12)
+happy = Mood.create(emotion: "happy", is_private: false, user_id: 6)
+happy.created_at = (rand*12).hours.ago
+happy.save
+
+awesome = Mood.create(emotion: "awesome", is_private: false, user_id: 6)
+awesome.created_at = (rand*12).hours.ago
+awesome.save
+
+sad = Mood.create(emotion: "sad", is_private: false, user_id: 7)
+sad.created_at = (rand*12).hours.ago
+sad.save
+
+lonely = Mood.create(emotion: "lonely", is_private: false, user_id: 7)
+lonely.created_at = (rand*12).hours.ago
+lonely.save
+
+bad = Mood.create(emotion: "bad", is_private: false, user_id: 8)
+bad.created_at = (rand*12).hours.ago
+bad.save
+
+pissed = Mood.create(emotion: "pissed", is_private: false, user_id: 8)
+pissed.created_at = (rand*12).hours.ago
+pissed.save
+
+bored = Mood.create(emotion: "bored", is_private: false, user_id: 9)
+bored.created_at = (rand*12).hours.ago
+bored.save
+
+sorry = Mood.create(emotion: "sorry", is_private: false, user_id: 9)
+sorry.created_at = (rand*12).hours.ago
+sorry.save
+
+sick = Mood.create(emotion: "sick", is_private: false, user_id: 10)
+sick.created_at = (rand*12).hours.ago
+sick.save
+
+sleepy = Mood.create(emotion: "sleepy", is_private: false, user_id: 10)
+sleepy.created_at = (rand*12).hours.ago
+sleepy.save
+
+tired = Mood.create(emotion: "tired", is_private: false, user_id: 11)
+tired.created_at = (rand*12).hours.ago
+tired.save
+
+confused = Mood.create(emotion: "confused", is_private: false, user_id: 11)
+confused.created_at = (rand*12).hours.ago
+confused.save
+
+annoyed = Mood.create(emotion: "annoyed", is_private: false, user_id: 12)
+annoyed.created_at = (rand*12).hours.ago
+annoyed.save
+
+hungry = Mood.create(emotion: "hungry", is_private: false, user_id: 12)
+hungry.created_at = (rand*12).hours.ago
+hungry.save

@@ -45,7 +45,7 @@ header > .logo a {
 
 h1.current-date {
   font-size: 96px;
-  line-height: 96px;
+  line-height: 72px;
   letter-spacing: -2px;
   text-align: center;
   position: fixed;
@@ -100,17 +100,25 @@ a.scroll-top {
 
 
 span.about-btn {
-  font-size: 24px;
+  font-size: 18px;
   color: #C2C0BF;
   display: inline-block;
-  line-height: 24px;
-  width: 32px;
+  line-height: 20px;
+  width: 26px;
   border-radius: 18px;
   border: 2px solid #C2C0BF;
   position: absolute;
-  right: -48px;
+  right: -40px;
   padding-top: 4px;
   top: 16px;
+  background: transparent;
+  transition: all .2s;
+}
+
+span.about-btn:hover {
+  background: #C2C0BF;
+  color: #F7F9F8;
+  transition: all .2s;
 }
 
 span.about-btn > strong {
@@ -157,13 +165,25 @@ span.about-btn > strong {
 
 .mood {
   animation-duration: 1s;
-  animation-delay: .1s;
+  animation-delay: .25s;
+  transition: all .2s;
+  cursor: crosshair;
+}
+
+.hidden {
+  opacity: .25;
+  transition: all .2s (.11,.7,.39,1);
 }
 
 .hour {
   position: absolute;
   width: 100%;
   z-index: -1;
+}
+
+.hour > strong {
+  padding-left: 12px;
+  color: #CCC;
 }
 
 .line {

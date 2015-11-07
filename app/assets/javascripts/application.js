@@ -44,7 +44,7 @@ $(document).ready(function() {
   // hour height
   var h_height = 200;
 
-  $('body.moods-index').css('height', h_height * 24);
+  $('body.moods-index, body.moods-latest').css('height', h_height * 24);
 
   $moods.each(function(index, mood) {
     var h = $(mood).attr('data-hour');
@@ -55,6 +55,23 @@ $(document).ready(function() {
       // 'opacity': Math.random() + 0.4
     });
     // $(mood).attr('data-stellar-ratio', Math.random() + 1);
+  });
+
+
+  // mood hover
+  $('body').on('mouseenter', '.mood', function () {
+
+    $('.mood').not(this).addClass('hidden');
+    // $(this).css('transform', 'scale(1.1)');
+
+  });
+
+
+  $('body').on('mouseleave', '.mood', function () {
+
+    $('.mood').not(this).removeClass('hidden');
+    // $(this).css('transform', 'scale(1)');
+
   });
 
 
@@ -76,7 +93,7 @@ $(document).ready(function() {
   // if page is moods-index then autoscroll
   // inspired by this: http://codepen.io/yvalentin/pen/raoMGQ/
 
-  if ($("body").hasClass("moods-index")) {
+  if (($("body").hasClass("moods-index")) || ($("body").hasClass("moods-latest"))) {
     var scrollSpeed = 1;
     var scrollDelay = 10;
 
