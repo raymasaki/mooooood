@@ -11,12 +11,25 @@
 <body class="<%= body_class %>">
 
   <section id="about">
-    <span class="close-btn">CLOSE</span>
-    <p>
-      <strong>MOOOOOOD</strong> is a generative infographic created by its contributors. You can get a sense for how people are feeling at all times of the day.</p>
-    <p class="instructions">If you want to contribute,
-      <strong>SIGN UP</strong> for an account and click on the
-      <strong>NEW MOOD</strong> button</p>
+    <span class="close-btn">
+      <svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+          <g id="About" sketch:type="MSArtboardGroup" transform="translate(-1360.000000, -32.000000)" stroke-linecap="square" stroke="#201614" stroke-width="2">
+            <g id="Line-+-Line" sketch:type="MSLayerGroup" transform="translate(1361.000000, 33.000000)">
+              <path d="M0.5,0.5 L45.754834,45.754834" id="Line" sketch:type="MSShapeGroup"></path>
+              <path d="M45.754834,0.5 L0.5,45.754834" id="Line" sketch:type="MSShapeGroup"></path>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </span>
+    <div class="desc">
+      <p>
+        <strong>MOOOOOOD</strong> is a generative infographic created by its contributors. You can get a sense for how people are feeling at all times of the day.</p>
+      <p>If you want to contribute,
+        <strong>SIGN UP</strong> for an account and click on the
+        <strong>NEW MOOD</strong> button</p>
+    </div>
   </section>
 
   <a href="#" class="scroll-top">
@@ -39,7 +52,9 @@
         <strong>?</strong>
       </span>
       <h1>
-        <a href="<%= root_path %>"><strong>MOOOOOOD</strong></a>
+        <a href="<%= root_path %>">
+          <strong>MOOOOOOD</strong>
+        </a>
       </h1>
     </div>
 

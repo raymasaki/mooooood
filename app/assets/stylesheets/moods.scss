@@ -58,8 +58,8 @@ h1.current-date {
 
 header > ul.userlinks {
   position: absolute;
-  right: 0;
-  top: 0;
+  top: 10px;
+  right: 14px;
 }
 
 header > ul.userlinks > li {
@@ -70,6 +70,13 @@ header > ul.userlinks > li {
 header > ul.userlinks > li a {
   text-decoration: none;
   color: #201614;
+  border-bottom: 2px solid transparent;
+  transition: all .1s;
+}
+
+header > ul.userlinks > li a:hover {
+  border-bottom: 2px solid #201614;
+  transition: all .1s;
 }
 
 li#login::after {
@@ -79,8 +86,8 @@ li#login::after {
 
 a.scroll-top {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 8px;
+  right: 14px;
   z-index: 800;
   opacity: 0;
   text-decoration: none;
@@ -132,15 +139,34 @@ span.about-btn > strong {
   background: #FAF5F7;
   display: none;
   z-index: 1000;
+  text-align: center;
+  opacity: 0;
+}
+
+#about > .desc {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  top: 45%;
+  transform: translateY(-45%);
+}
+
+#about > span.close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  height: 48px;
+  width: 48px;
+}
+
+#about > .desc > p:first-child {
+  font-size: 2em;
+  line-height: 48px;
+  padding-bottom: 60px;
 }
 
 .show {
   display: block !important;
-}
-
-.about-btn, .close-btn {
-  cursor: pointer;
-  color: red;
 }
 
 

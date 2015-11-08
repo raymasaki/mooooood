@@ -34,10 +34,34 @@ $(document).ready(function() {
   // Clicking on the ? link
   $('.about-btn').click(function() {
     $('#about').addClass('show');
+
+    $('#about').velocity({
+      opacity: [1, 0],
+      scale: [1, 0.95]
+    }, {
+      duration: 300,
+      easing: [0.37, 0.36, 0.13, 1]
+    });
+
+  });
+
+  $('.about-btn').mouseenter(function() {
+    $(this).css('cursor', 'pointer');
   });
 
   $('.close-btn').click(function() {
-    $('#about').removeClass('show');
+
+    $('#about').velocity({
+      opacity: [0, 1],
+      scale: [0.98, 1]
+    }, {
+      duration: 200,
+      easing: [0.37, 0.36, 0.13, 1],
+      complete: function () {
+        $('#about').removeClass('show');
+      }
+    });
+
   });
 
   var $moods = $('.mood');
@@ -110,9 +134,32 @@ $(document).ready(function() {
 		}
 	});
 
-	//Click event to scroll to top
+	// Click event to scroll to top
 	$('.scroll-top').click(function(){
     $('html, body').velocity("scroll", { duration: 1500, easing: [0.44, 0.45, 0.42,1] });
 	});
+
+  // About close button hover
+  $('.close-btn').mouseenter(function () {
+    $(this).velocity({
+      rotateZ: [ 0, 90 ]
+    },{
+      delay: 0,
+      duration: 250,
+      easing: [0.37, 0.36, 0.13, 1]
+    });
+
+    $(this).css('cursor', 'pointer');
+  });
+
+  $('.close-btn').mouseleave(function () {
+    $(this).velocity({
+      rotateZ: [ 90, 0 ]
+    },{
+      delay: 0,
+      duration: 250,
+      easing: [0.37, 0.36, 0.13, 1]
+    });
+  });
 
 });
