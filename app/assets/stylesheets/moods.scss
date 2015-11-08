@@ -5,15 +5,9 @@
 $darkGrey: #201614;
 $midGrey: #c2c0bf;
 
-.TimesNRMTStd-Cond {
-	font-family: TimesNRMTStd-Cond;
-	font-weight: normal;
-	font-style: normal;
-}
-
 body {
   background: #f7f9f8;
-  font-family: TimesNRMTStd-Cond, serif;
+  font-family: 'TimesNRMTStd-Cond', serif;
   opacity: 0;
   font-size: 18px;
   line-height: 22px;
@@ -188,7 +182,7 @@ input {
   font-size: 2em;
   padding: 24px 0;
   margin-bottom: 24px;
-  font-family: TimesNRMTStd-Cond, serif;
+  font-family: 'TimesNRMTStd-Cond', serif;
   border: transparent;
   border-bottom: 2px solid $darkGrey;
   background: transparent;
