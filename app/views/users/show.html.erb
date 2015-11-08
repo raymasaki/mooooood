@@ -1,2 +1,6 @@
-<h1>Hi <%= @user.username.capitalize %></h1>
-<%= link_to "Delete Account", user_path(@user), method: :delete, data: {confirm: "Are you sure?"} %>
+<div class="form-container delete">
+  <div class="form">
+    <h1><%= @user.username.capitalize %>’s Account</h1>
+    <%= link_to "Delete Account", user_path(@user), method: :delete, data: {confirm: "Are you sure?"} %>
+  </div>
+</div>

@@ -219,7 +219,7 @@ form input[type=submit]:hover {
   top: 52%;
   transform: translateY(-52%);
 }
-.mood-select > h1 {
+.mood-select > h1, .form > h1 {
   font-size: 2em;
   text-align: center;
   padding-bottom: 72px;
@@ -271,16 +271,43 @@ ul.emotions > li > input[type=radio]:checked + label::before {
 ul.emotions > li > input[type=radio] {
   transition: all 0.2s (.11,.7,.39,1);
 }
-
+.delete {
+  text-align: center;
+}
+.delete h1 {
+  padding-bottom: 48px;
+}
+.delete a {
+  font-family: 'ITCFranklinGothicStd-DmXCp', sans-serif;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  font-size: 36px;
+  line-height: 48px;
+  background: none;
+  padding: 0;
+  margin: 24px 0 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.1s;
+  text-decoration: none;
+  color: $darkGrey;
+}
+.delete a:hover {
+  border-bottom: 2px solid $darkGrey;
+  transition: all 0.1s;
+  cursor: pointer;
+}
 
 ////////////// MOODS //////////////
 .moods-new .hour,
 .users-new .hour,
+.users-show .hour,
 .sessions-new .hour {
   display: none;
 }
 .moods-new .current-date,
 .users-new .current-date,
+.users-show .current-date,
 .sessions-new .current-date {
   display: none;
 }
