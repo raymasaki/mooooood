@@ -59,17 +59,25 @@
     </div>
 
     <% if logged_in %>
-      <li id="create">
-        <%= link_to "NEW MOOD", new_mood_path, class: "new_mood" %>
+      <li class="create">
+        <strong>
+          <%= link_to "NEW MOOD", new_mood_path, class: "new_mood" %>
+        </strong>
       </li>
-      <li id="logout">
-        <%= link_to 'LOG OUT', logout_path, :method => :delete %>
-      </li>
-      <li>Welcome,
-        <a href="<%= user_path(current_user) %>">
-          <%= current_user.username.capitalize %>
-        </a>
-      </li>
+      <ul class="userlinks">
+        <li class="logout">
+          <strong>
+            <%= link_to 'LOG OUT', logout_path, :method => :delete %>
+          </strong>
+        </li>
+        <li>
+          <strong>
+          <a href="<%= user_path(current_user) %>">
+              <%= current_user.username.upcase %>
+            </strong>
+          </a>
+        </li>
+      </ul>
       <% else %>
         <ul class="userlinks">
           <li class="login">

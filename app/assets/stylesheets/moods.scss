@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 ////////////// GLOBAL //////////////
+$darkGrey: #201614;
+$midGrey: #c2c0bf;
 body {
   background: #f7f9f8;
 
@@ -10,7 +12,7 @@ body {
   opacity: 0;
   font-size: 18px;
   line-height: 22px;
-  color: #201614;
+  color: $darkGrey;
 }
 strong {
   font-family: 'ITCFranklinGothicStd-DmXCp', sans-serif;
@@ -34,7 +36,7 @@ header > .logo {
 }
 header > .logo a {
   text-decoration: none;
-  color: #201614;
+  color: $darkGrey;
 }
 h1.current-date {
   font-size: 96px;
@@ -53,28 +55,38 @@ header > ul.userlinks {
   top: 10px;
   right: 14px;
 }
+header > li {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  display: inline;
+  list-style: none;
+}
 header > ul.userlinks > li {
   display: inline;
   list-style: none;
 }
-header > ul.userlinks > li a {
+header > ul.userlinks > li a,
+header > li.create a {
   text-decoration: none;
-  color: #201614;
+  color: $darkGrey;
   border-bottom: 2px solid transparent;
   transition: all 0.1s;
 }
-header > ul.userlinks > li a:hover {
-  border-bottom: 2px solid #201614;
+header > ul.userlinks > li a:hover,
+header > li.create a:hover {
+  border-bottom: 2px solid $darkGrey;
   transition: all 0.1s;
 }
 body.users-new > header > ul.userlinks > li.signup a,
 body.sessions-new > header > ul.userlinks > li.login a {
-  border-bottom: 2px solid #201614;
+  border-bottom: 2px solid $darkGrey;
 }
-li.login::after {
+li.login::after,
+li.logout::after {
   content: "|";
   padding: 5px;
-  color: #c2c0bf;
+  color: $midGrey;
 }
 a.scroll-top {
   position: fixed;
@@ -83,7 +95,7 @@ a.scroll-top {
   z-index: 800;
   opacity: 0;
   text-decoration: none;
-  color: #201614;
+  color: $darkGrey;
   transition: all 0.4s;
 }
 .visible {
@@ -94,12 +106,12 @@ a.scroll-top {
 ////////////// ABOUT //////////////
 span.about-btn {
   font-size: 18px;
-  color: #c2c0bf;
+  color: $midGrey;
   display: inline-block;
   line-height: 20px;
   width: 26px;
   border-radius: 18px;
-  border: 2px solid #c2c0bf;
+  border: 2px solid $midGrey;
   position: absolute;
   right: -40px;
   padding-top: 4px;
@@ -108,7 +120,7 @@ span.about-btn {
   transition: all 0.2s;
 }
 span.about-btn:hover {
-  background: #c2c0bf;
+  background: $midGrey;
   color: #f7f9f8;
   transition: all 0.2s;
 }
@@ -149,7 +161,6 @@ span.about-btn > strong {
 }
 
 ////////////// FORMS //////////////
-
 .form-container {
   width: 100%;
   height: 100%;
@@ -163,21 +174,22 @@ span.about-btn > strong {
   transform: translateY(-45%);
   padding: 24px;
 }
-
-textarea, input { outline: none; }
-
-.form form input[type=text], .form form input[type=password] {
+textarea,
+input {
+  outline: none;
+}
+.form form input[type=text],
+.form form input[type=password] {
   font-size: 2em;
   padding: 24px 0;
   margin-bottom: 24px;
   font-family: 'Times NR Condensed', sans-serif;
   border: transparent;
-  border-bottom: 2px solid #201614;
+  border-bottom: 2px solid $darkGrey;
   background: transparent;
   width: 100%;
 }
-
-.form form input[type=submit] {
+form input[type=submit] {
   font-family: 'ITCFranklinGothicStd-DmXCp', sans-serif;
   text-transform: uppercase;
   border: none;
@@ -186,15 +198,54 @@ textarea, input { outline: none; }
   line-height: 48px;
   background: none;
   padding: 0;
-  margin: 24px 0 0 0;
+  margin: 24px 0 0;
   border-bottom: 2px solid transparent;
   transition: all 0.1s;
 }
-
-.form form input[type=submit]:hover {
-  border-bottom: 2px solid #201614;
+form input[type=submit]:hover {
+  border-bottom: 2px solid $darkGrey;
   transition: all 0.1s;
   cursor: pointer;
+}
+#content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.mood-select {
+  max-width: 1152px;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.mood-select > h1 {
+  font-size: 2em;
+  text-align: center;
+  padding-bottom: 60px;
+}
+p.members {
+  position: absolute;
+  top: 6px;
+  right: 24px;
+}
+ul.emotions {
+  text-align: center;
+}
+ul.emotions > li {
+  display: inline;
+  float: left;
+  width: 96px;
+  padding-bottom: 48px;
+}
+ul.emotions > li > label {
+  display: block;
+}
+p.members, p.submit-btn {
+  clear: both;
+}
+.mood-select > form input[type=submit] {
+  margin-left: 32px;
 }
 
 ////////////// MOODS //////////////
