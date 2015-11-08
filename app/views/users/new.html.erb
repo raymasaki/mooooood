@@ -1,26 +1,25 @@
-<div class="form">
+<div class="form-container">
+  <div class="form">
 
-  <%= form_for @user do |f| %>
+    <%= form_for @user do |f| %>
 
-  <p>
-    <%= f.label :username, "Username: " %><br>
-    <%= f.text_field :username %>
-  </p>
+    <p>
+      <%= f.text_field :username, :placeholder => 'username' %>
+    </p>
 
-  <p>
-    <%= f.label :password, "Password: " %><br>
-    <%= f.password_field :password %>
-  </p>
+    <p>
+      <%= f.password_field :password, :placeholder => 'password' %>
+    </p>
 
-  <p>
-    <%= f.label :password_confirmation, "Confirm Password: " %><br>
-    <%= f.password_field :password_confirmation %>
-  </p>
+    <p>
+      <%= f.password_field :password_confirmation, :placeholder => 'confirm password' %>
+    </p>
 
-  <p>
-    <%= f.submit %>
-  </p>
+    <p>
+      <%= f.submit %>
+    </p>
 
-  <% end %>
+    <% end %>
 
+  </div>
 </div>

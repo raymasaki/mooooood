@@ -1,19 +1,19 @@
-<div class="form">
+<div class="form-container">
+  <div class="form">
 
-  <%= form_for(:session, url: login_path) do |f| %>
+    <%= form_for(:session, url: login_path) do |f| %>
 
-  <p>
-    <%= f.label :username, "Username: " %><br>
-    <%= f.text_field :username %>
-  </p>
+    <p>
+      <%= f.text_field :username, :placeholder => 'username' %>
+    </p>
 
-  <p>
-    <%= f.label :password, "Password: " %><br>
-    <%= f.password_field :password %>
-  </p>
+    <p>
+      <%= f.password_field :password, :placeholder => 'password' %>
+    </p>
 
-  <%= f.submit "Log In" %>
+    <%= f.submit "Log In" %>
 
-  <% end %>
+    <% end %>
 
+  </div>
 </div>

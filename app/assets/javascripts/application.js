@@ -20,16 +20,41 @@
 
 $(document).ready(function() {
 
+  /***************** Initialize WOW *****************/
+
   new WOW().init();
 
+
+  /***************** Initial Fade In *****************/
+
+  // Fade out before page transition
+
+  // $('body').on('click', 'a', function () {
+  //
+  //   event.preventDefault();
+  //   newLocation = this.href;
+  //
+  //   $('body').velocity({
+  //     opacity: [0, 1]
+  //   }, {
+  //     duration: 100,
+  //     easing: [0.37, 0.36, 0.13, 1],
+  //     complete: function newpage() {
+  //       window.location = newLocation;
+  //     }
+  //   });
+  // });
+
+
   $('body').velocity({
-    opacity: [1, 0],
-    // scale: [1, 0.9]
+    opacity: [1, 0]
   }, {
     duration: 800,
     delay: 250,
     easing: [0.37, 0.36, 0.13, 1]
   });
+
+  /***************** About Button *****************/
 
   // Clicking on the ? link
   $('.about-btn').click(function() {
@@ -57,12 +82,61 @@ $(document).ready(function() {
     }, {
       duration: 200,
       easing: [0.37, 0.36, 0.13, 1],
-      complete: function () {
+      complete: function() {
         $('#about').removeClass('show');
       }
     });
 
   });
+
+
+  // About close button hover
+  $('.close-btn').mouseenter(function() {
+    $(this).velocity({
+      rotateZ: [0, 90]
+    }, {
+      delay: 0,
+      duration: 250,
+      easing: [0.37, 0.36, 0.13, 1]
+    });
+
+    $(this).css('cursor', 'pointer');
+  });
+
+  $('.close-btn').mouseleave(function() {
+    $(this).velocity({
+      rotateZ: [90, 0]
+    }, {
+      delay: 0,
+      duration: 250,
+      easing: [0.37, 0.36, 0.13, 1]
+    });
+  });
+
+
+
+  /***************** Autoscroll *****************/
+
+
+  var scrollSpeed = 1;
+
+  function autoScroll() {
+    window.scrollBy(0, scrollSpeed);
+  }
+
+  // if page is moods-index then autoscroll
+  // inspired by this: http://codepen.io/yvalentin/pen/raoMGQ/
+
+  if (($("body").hasClass("moods-index")) || ($("body").hasClass("moods-latest"))) {
+
+    var scrollDelay = 10;
+
+    var scrollInterval = setInterval(autoScroll, scrollDelay);
+  }
+
+
+  /***************** Mood Plotter *****************/
+
 
   var $moods = $('.mood');
   // hour height
@@ -83,20 +157,29 @@ $(document).ready(function() {
 
 
   // mood hover
-  $('body').on('mouseenter', '.mood', function () {
+  $('body').on('mouseenter', '.mood', function() {
 
     $('.mood').not(this).addClass('hidden');
     // $(this).css('transform', 'scale(1.1)');
 
+    // scrollSpeed = 0.5;
+
   });
 
 
-  $('body').on('mouseleave', '.mood', function () {
+  $('body').on('mouseleave', '.mood', function() {
 
     $('.mood').not(this).removeClass('hidden');
     // $(this).css('transform', 'scale(1)');
 
+    // scrollSpeed = 1;
+
   });
+
+
+
+  /***************** Hour Line Generator *****************/
+
 
 
   // generate hour lines
@@ -110,56 +193,29 @@ $(document).ready(function() {
     $('body').append($hour);
   }
 
-  function autoScroll() {
-      window.scrollBy(0, scrollSpeed);
-  }
 
-  // if page is moods-index then autoscroll
-  // inspired by this: http://codepen.io/yvalentin/pen/raoMGQ/
 
-  if (($("body").hasClass("moods-index")) || ($("body").hasClass("moods-latest"))) {
-    var scrollSpeed = 1;
-    var scrollDelay = 10;
+  /***************** Back To Top Button *****************/
 
-    var scrollInterval = setInterval(autoScroll, scrollDelay);
-  }
 
   // back to top button
 
-  $(window).scroll(function(){
-		if ($(this).scrollTop() > 400) {
-			$('.scroll-top').addClass('visible');
-		} else {
-			$('.scroll-top').removeClass('visible');
-		}
-	});
-
-	// Click event to scroll to top
-	$('.scroll-top').click(function(){
-    $('html, body').velocity("scroll", { duration: 1500, easing: [0.44, 0.45, 0.42,1] });
-	});
-
-  // About close button hover
-  $('.close-btn').mouseenter(function () {
-    $(this).velocity({
-      rotateZ: [ 0, 90 ]
-    },{
-      delay: 0,
-      duration: 250,
-      easing: [0.37, 0.36, 0.13, 1]
-    });
-
-    $(this).css('cursor', 'pointer');
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 400) {
+      $('.scroll-top').addClass('visible');
+    } else {
+      $('.scroll-top').removeClass('visible');
+    }
   });
 
-  $('.close-btn').mouseleave(function () {
-    $(this).velocity({
-      rotateZ: [ 90, 0 ]
-    },{
-      delay: 0,
-      duration: 250,
-      easing: [0.37, 0.36, 0.13, 1]
+  // Click event to scroll to top
+  $('.scroll-top').click(function() {
+    $('html, body').velocity("scroll", {
+      duration: 1500,
+      easing: [0.44, 0.45, 0.42, 1]
     });
   });
+
+
 
 });

@@ -1,10 +1,10 @@
 // Place all the styles related to the Moods controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 ////////////// GLOBAL //////////////
 body {
-  background: #F7F9F8;
+  background: #f7f9f8;
+
   // temporary until webfont
   font-family: 'Times NR Condensed', sans-serif;
   opacity: 0;
@@ -12,22 +12,17 @@ body {
   line-height: 22px;
   color: #201614;
 }
-
 strong {
   font-family: 'ITCFranklinGothicStd-DmXCp', sans-serif;
 }
 
-
-
 ////////////// HEADER //////////////
-
 header {
   position: fixed;
   width: 100%;
   z-index: 500;
   top: 0;
 }
-
 header > .logo {
   font-size: 96px;
   line-height: 96px;
@@ -37,12 +32,10 @@ header > .logo {
   margin: 0 auto;
   position: relative;
 }
-
 header > .logo a {
   text-decoration: none;
   color: #201614;
 }
-
 h1.current-date {
   font-size: 96px;
   line-height: 72px;
@@ -55,35 +48,34 @@ h1.current-date {
   pointer-events: none;
   z-index: 500;
 }
-
 header > ul.userlinks {
   position: absolute;
   top: 10px;
   right: 14px;
 }
-
 header > ul.userlinks > li {
   display: inline;
   list-style: none;
 }
-
 header > ul.userlinks > li a {
   text-decoration: none;
   color: #201614;
   border-bottom: 2px solid transparent;
-  transition: all .1s;
+  transition: all 0.1s;
 }
-
 header > ul.userlinks > li a:hover {
   border-bottom: 2px solid #201614;
-  transition: all .1s;
+  transition: all 0.1s;
 }
-
-li#login::after {
+body.users-new > header > ul.userlinks > li.signup a,
+body.sessions-new > header > ul.userlinks > li.login a {
+  border-bottom: 2px solid #201614;
+}
+li.login::after {
   content: "|";
-  color: #C2C0BF;
+  padding: 5px;
+  color: #c2c0bf;
 }
-
 a.scroll-top {
   position: fixed;
   bottom: 8px;
@@ -92,57 +84,47 @@ a.scroll-top {
   opacity: 0;
   text-decoration: none;
   color: #201614;
-  transition: all .4s;
+  transition: all 0.4s;
 }
-
 .visible {
   opacity: 1 !important;
-  transition: all .25s;
+  transition: all 0.25s;
 }
 
-
-
-
 ////////////// ABOUT //////////////
-
-
 span.about-btn {
   font-size: 18px;
-  color: #C2C0BF;
+  color: #c2c0bf;
   display: inline-block;
   line-height: 20px;
   width: 26px;
   border-radius: 18px;
-  border: 2px solid #C2C0BF;
+  border: 2px solid #c2c0bf;
   position: absolute;
   right: -40px;
   padding-top: 4px;
   top: 16px;
   background: transparent;
-  transition: all .2s;
+  transition: all 0.2s;
 }
-
 span.about-btn:hover {
-  background: #C2C0BF;
-  color: #F7F9F8;
-  transition: all .2s;
+  background: #c2c0bf;
+  color: #f7f9f8;
+  transition: all 0.2s;
 }
-
 span.about-btn > strong {
   margin-left: -2px;
 }
-
 #about {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #FAF5F7;
+  background: #faf5f7;
   display: none;
   z-index: 1000;
   text-align: center;
   opacity: 0;
 }
-
 #about > .desc {
   max-width: 700px;
   margin: 0 auto;
@@ -150,7 +132,6 @@ span.about-btn > strong {
   top: 45%;
   transform: translateY(-45%);
 }
-
 #about > span.close-btn {
   position: absolute;
   top: 24px;
@@ -158,67 +139,100 @@ span.about-btn > strong {
   height: 48px;
   width: 48px;
 }
-
 #about > .desc > p:first-child {
   font-size: 2em;
   line-height: 48px;
   padding-bottom: 60px;
 }
-
 .show {
   display: block !important;
 }
 
-
 ////////////// FORMS //////////////
 
+.form-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
 .form {
-  width: 60%;
-  margin-top: 20%;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  top: 45%;
+  transform: translateY(-45%);
+  padding: 24px;
 }
 
+textarea, input { outline: none; }
+
+.form form input[type=text], .form form input[type=password] {
+  font-size: 2em;
+  padding: 24px 0;
+  margin-bottom: 24px;
+  font-family: 'Times NR Condensed', sans-serif;
+  border: transparent;
+  border-bottom: 2px solid #201614;
+  background: transparent;
+  width: 100%;
+}
+
+.form form input[type=submit] {
+  font-family: 'ITCFranklinGothicStd-DmXCp', sans-serif;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  font-size: 36px;
+  line-height: 48px;
+  background: none;
+  padding: 0;
+  margin: 24px 0 0 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.1s;
+}
+
+.form form input[type=submit]:hover {
+  border-bottom: 2px solid #201614;
+  transition: all 0.1s;
+  cursor: pointer;
+}
 
 ////////////// MOODS //////////////
-
-
-.moods-new .hour, .users-new .hour, .sessions-new .hour {
+.moods-new .hour,
+.users-new .hour,
+.sessions-new .hour {
   display: none;
 }
-
-.moods-new .current-date, .users-new .current-date, .sessions-new .current-date {
+.moods-new .current-date,
+.users-new .current-date,
+.sessions-new .current-date {
   display: none;
 }
-
 .mood {
   animation-duration: 1s;
-  animation-delay: .25s;
-  transition: all .2s;
+  animation-delay: 0.25s;
+  transition: all 0.2s;
   cursor: crosshair;
 }
-
 .hidden {
-  opacity: .25;
-  transition: all .2s (.11,.7,.39,1);
+  opacity: 0.25;
+  transition: all 0.2s (.11,.7,.39,1);
 }
-
 .hour {
   position: absolute;
   width: 100%;
   z-index: -1;
 }
-
 .hour > strong {
   padding-left: 12px;
-  color: #CCC;
+  color: #ccc;
 }
-
 .line {
   border: 0;
-  color: #EAEBE9;
-  background-color: #EAEBE9;
+  color: #eaebe9;
+  background-color: #eaebe9;
   height: 2px;
 }
-
 .circle {
   width: 32px;
   height: 32px;
@@ -227,84 +241,82 @@ span.about-btn > strong {
   z-index: 50;
 }
 .chill .circle {
-  background: #A2C5E2;
+  background: #a2c5e2;
 }
 .sad .circle {
-  background: #93A5B4;
+  background: #93a5b4;
 }
 .cool .circle {
-  background: #AECCD2;
+  background: #aeccd2;
 }
 .bad .circle {
-  background: #9FAFB0;
+  background: #9fafb0;
 }
 .drunk .circle {
-  background: #BAD4C1;
+  background: #bad4c1;
 }
 .bored .circle {
-  background: #A3B0A6;
+  background: #a3b0a6;
 }
 .funny .circle {
-  background: #C6DBB7;
+  background: #c6dbb7;
 }
 .sick .circle {
-  background: #A7B39E;
+  background: #a7b39e;
 }
 .meh .circle {
-  background: #CFE1A5;
+  background: #cfe1a5;
 }
 .tired .circle {
-  background: #ACB595;
+  background: #acb595;
 }
 .happy .circle {
-  background: #D9E796;
+  background: #d9e796;
 }
 .annoyed .circle {
-  background: #B3BA90;
+  background: #b3ba90;
 }
 .awesome .circle {
-  background: #DCD795;
+  background: #dcd795;
 }
 .hungry .circle {
-  background: #B6B18E;
+  background: #b6b18e;
 }
 .amazing .circle {
-  background: #E0C393;
+  background: #e0c393;
 }
 .confused .circle {
-  background: #B5A58C;
+  background: #b5a58c;
 }
 .excited .circle {
-  background: #E2B18E;
+  background: #e2b18e;
 }
 .sleepy .circle {
-  background: #B7998A;
+  background: #b7998a;
 }
 .surprised .circle {
-  background: #E79F8F;
+  background: #e79f8f;
 }
 .sorry .circle {
-  background: #B89089;
+  background: #b89089;
 }
 .relieved .circle {
-  background: #E9898A;
+  background: #e9898a;
 }
 .pissed .circle {
-  background: #B88788;
+  background: #b88788;
 }
 .loved .circle {
-  background: #E988A3;
+  background: #e988a3;
 }
 .lonely .circle {
-  background: #BB869D;
+  background: #bb869d;
 }
-
 .mood {
   position: absolute;
   top: 0;
   left: 0;
 }
-
 .chill {
   left: 1%;
 }

@@ -25,7 +25,7 @@
     </span>
     <div class="desc">
       <p>
-        <strong>MOOOOOOD</strong> is a generative infographic created by its contributors. You can get a sense for how people are feeling at all times of the day.</p>
+        <strong>MOOOOOOD</strong> is a generative infographic created by its contributors. View by <strong>TIME</strong> or <strong>LATEST</strong> to get a sense for how people are feeling at all times of the day.</p>
       <p>If you want to contribute,
         <strong>SIGN UP</strong> for an account and click on the
         <strong>NEW MOOD</strong> button</p>
@@ -72,12 +72,12 @@
       </li>
       <% else %>
         <ul class="userlinks">
-          <li id="login">
+          <li class="login">
             <strong>
               <%= link_to "LOG IN", login_path, class: "login" %>
             </strong>
           </li>
-          <li>
+          <li class="signup">
             <strong>
               <%= link_to "SIGN UP", new_user_path, class: "signup" %>
             </strong>
