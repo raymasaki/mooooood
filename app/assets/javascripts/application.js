@@ -178,6 +178,25 @@ $(document).ready(function() {
 
 
 
+
+  /***************** Mood Selection *****************/
+
+
+
+
+  $('input[type=radio]').click(function () {
+    if ($(this).is(':checked')) {
+      $('input[type=radio]').not(this).parent().addClass('hidden');
+    }
+  });
+
+  $('label').click(function () {
+    $(this).parent().removeClass('hidden');
+    console.log('hidden clicked');
+  });
+
+
+
   /***************** Hour Line Generator *****************/
 
 

@@ -216,13 +216,13 @@ form input[type=submit]:hover {
   max-width: 1152px;
   margin: 0 auto;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 52%;
+  transform: translateY(-52%);
 }
 .mood-select > h1 {
   font-size: 2em;
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 72px;
 }
 p.members {
   position: absolute;
@@ -231,11 +231,13 @@ p.members {
 }
 ul.emotions {
   text-align: center;
+  margin-bottom: 60px;
 }
 ul.emotions > li {
   display: inline;
   float: left;
   width: 96px;
+  height: 60px;
   padding-bottom: 48px;
 }
 ul.emotions > li > label {
@@ -245,8 +247,31 @@ p.members, p.submit-btn {
   clear: both;
 }
 .mood-select > form input[type=submit] {
-  margin-left: 32px;
+  margin: 0 0 0 32px;
 }
+input[type=radio] {
+    display: none;
+}
+ul.emotions > li > label::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    margin-top: -48px;
+    border-radius: 16px;
+    background-color: #aaa;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    float: left;
+    margin-left: 32px;
+}
+ul.emotions > li > input[type=radio]:checked + label::before {
+  // border: 4px solid rgba(255, 255, 255, 0.6);
+}
+ul.emotions > li > input[type=radio] {
+  transition: all 0.2s (.11,.7,.39,1);
+}
+
 
 ////////////// MOODS //////////////
 .moods-new .hour,
@@ -291,77 +316,77 @@ p.members, p.submit-btn {
   background: #efefef;
   z-index: 50;
 }
-.chill .circle {
-  background: #a2c5e2;
+.chill .circle, label[for=mood_emotion_chill]::before {
+  background: #a2c5e2 !important;
 }
-.sad .circle {
-  background: #93a5b4;
+.sad .circle, label[for=mood_emotion_sad]::before {
+  background: #93a5b4 !important;
 }
-.cool .circle {
-  background: #aeccd2;
+.cool .circle, label[for=mood_emotion_cool]::before {
+  background: #aeccd2 !important;
 }
-.bad .circle {
-  background: #9fafb0;
+.bad .circle, label[for=mood_emotion_bad]::before {
+  background: #9fafb0 !important;
 }
-.drunk .circle {
-  background: #bad4c1;
+.drunk .circle, label[for=mood_emotion_drunk]::before {
+  background: #bad4c1 !important;
 }
-.bored .circle {
-  background: #a3b0a6;
+.bored .circle, label[for=mood_emotion_bored]::before {
+  background: #a3b0a6 !important;
 }
-.funny .circle {
-  background: #c6dbb7;
+.funny .circle, label[for=mood_emotion_funny]::before {
+  background: #c6dbb7 !important;
 }
-.sick .circle {
-  background: #a7b39e;
+.sick .circle, label[for=mood_emotion_sick]::before {
+  background: #a7b39e !important;
 }
-.meh .circle {
-  background: #cfe1a5;
+.meh .circle, label[for=mood_emotion_meh]::before {
+  background: #cfe1a5 !important;
 }
-.tired .circle {
-  background: #acb595;
+.tired .circle, label[for=mood_emotion_tired]::before {
+  background: #acb595 !important;
 }
-.happy .circle {
-  background: #d9e796;
+.happy .circle, label[for=mood_emotion_happy]::before {
+  background: #d9e796 !important;
 }
-.annoyed .circle {
-  background: #b3ba90;
+.annoyed .circle, label[for=mood_emotion_annoyed]::before {
+  background: #b3ba90 !important;
 }
-.awesome .circle {
-  background: #dcd795;
+.awesome .circle, label[for=mood_emotion_awesome]::before {
+  background: #dcd795 !important;
 }
-.hungry .circle {
-  background: #b6b18e;
+.hungry .circle, label[for=mood_emotion_hungry]::before {
+  background: #b6b18e !important;
 }
-.amazing .circle {
-  background: #e0c393;
+.amazing .circle, label[for=mood_emotion_amazing]::before {
+  background: #e0c393 !important;
 }
-.confused .circle {
-  background: #b5a58c;
+.confused .circle, label[for=mood_emotion_confused]::before {
+  background: #b5a58c !important;
 }
-.excited .circle {
-  background: #e2b18e;
+.excited .circle, label[for=mood_emotion_excited]::before {
+  background: #e2b18e !important;
 }
-.sleepy .circle {
-  background: #b7998a;
+.sleepy .circle, label[for=mood_emotion_sleepy]::before {
+  background: #b7998a !important;
 }
-.surprised .circle {
-  background: #e79f8f;
+.surprised .circle, label[for=mood_emotion_surprised]::before {
+  background: #e79f8f !important;
 }
-.sorry .circle {
-  background: #b89089;
+.sorry .circle, label[for=mood_emotion_sorry]::before {
+  background: #b89089 !important;
 }
-.relieved .circle {
-  background: #e9898a;
+.relieved .circle, label[for=mood_emotion_relieved]::before {
+  background: #e9898a !important;
 }
-.pissed .circle {
-  background: #b88788;
+.pissed .circle, label[for=mood_emotion_pissed]::before {
+  background: #b88788 !important;
 }
-.loved .circle {
-  background: #e988a3;
+.loved .circle, label[for=mood_emotion_loved]::before {
+  background: #e988a3 !important;
 }
-.lonely .circle {
-  background: #bb869d;
+.lonely .circle, label[for=mood_emotion_lonely]::before {
+  background: #bb869d !important;
 }
 .mood {
   position: absolute;
