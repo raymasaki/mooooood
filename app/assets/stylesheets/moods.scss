@@ -4,18 +4,23 @@
 ////////////// GLOBAL //////////////
 $darkGrey: #201614;
 $midGrey: #c2c0bf;
+
+.TimesNRMTStd-Cond {
+	font-family: TimesNRMTStd-Cond;
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
   background: #f7f9f8;
-
-  // temporary until webfont
-  font-family: 'Times NR Condensed', sans-serif;
+  font-family: TimesNRMTStd-Cond, serif;
   opacity: 0;
   font-size: 18px;
   line-height: 22px;
   color: $darkGrey;
 }
 strong {
-  font-family: 'ITCFranklinGothicStd-DmXCp', sans-serif;
+  font-family: 'franklin-gothic-ext-comp-urw', sans-serif;
 }
 
 ////////////// HEADER //////////////
@@ -183,14 +188,14 @@ input {
   font-size: 2em;
   padding: 24px 0;
   margin-bottom: 24px;
-  font-family: 'Times NR Condensed', sans-serif;
+  font-family: TimesNRMTStd-Cond, serif;
   border: transparent;
   border-bottom: 2px solid $darkGrey;
   background: transparent;
   width: 100%;
 }
 form input[type=submit] {
-  font-family: 'ITCFranklinGothicStd-DmXCp', sans-serif;
+  font-family: 'franklin-gothic-ext-comp-urw', sans-serif;
   text-transform: uppercase;
   border: none;
   outline: none;
@@ -278,7 +283,7 @@ ul.emotions > li > input[type=radio] {
   padding-bottom: 48px;
 }
 .delete a {
-  font-family: 'ITCFranklinGothicStd-DmXCp', sans-serif;
+  font-family: 'franklin-gothic-ext-comp-urw', sans-serif;
   text-transform: uppercase;
   border: none;
   outline: none;
