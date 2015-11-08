@@ -2,6 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 ////////////// GLOBAL //////////////
+
+@import url("//hello.myfonts.net/count/2fa241");
+
+@font-face {
+  font-family:'TimesNRMTStd-Cond';
+  src:font-url('2FA241_0_0.eot');
+  src:font-url('2FA241_0_0.eot?#iefix') format('embedded-opentype'),
+      font-url('2FA241_0_0.woff') format('woff'),
+      font-url('2FA241_0_0.woff2') format('woff2'),
+      font-url('2FA241_0_0.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 $darkGrey: #201614;
 $midGrey: #c2c0bf;
 
