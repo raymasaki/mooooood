@@ -7,11 +7,11 @@
 
 @font-face {
   font-family:'TimesNRMTStd-Cond';
-  src:font-url('2FA241_0_0.eot');
-  src:font-url('2FA241_0_0.eot?#iefix') format('embedded-opentype'),
-      font-url('2FA241_0_0.woff') format('woff'),
-      font-url('2FA241_0_0.woff2') format('woff2'),
-      font-url('2FA241_0_0.ttf')  format('truetype');
+  src:font-url('TimesNRMTStd-Cond.eot');
+  src:font-url('TimesNRMTStd-Cond.eot?#iefix') format('embedded-opentype'),
+      font-url('TimesNRMTStd-Cond.woff') format('woff'),
+      font-url('TimesNRMTStd-Cond.woff2') format('woff2'),
+      font-url('TimesNRMTStd-Cond.ttf')  format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -21,14 +21,14 @@ $midGrey: #c2c0bf;
 
 body {
   background: #f7f9f8;
-  font-family: 'TimesNRMTStd-Cond', serif;
+  font-family: 'TimesNRMTStd-Cond', 'Times NR Condensed', serif;
   opacity: 0;
   font-size: 18px;
   line-height: 22px;
   color: $darkGrey;
 }
 strong {
-  font-family: 'franklin-gothic-ext-comp-urw', sans-serif;
+  font-family: 'franklin-gothic-ext-comp-urw', 'ITCFranklinGothicStd-DmXCp', sans-serif;
 }
 
 ////////////// HEADER //////////////
@@ -196,14 +196,14 @@ input {
   font-size: 2em;
   padding: 24px 0;
   margin-bottom: 24px;
-  font-family: 'TimesNRMTStd-Cond', serif;
+  font-family: 'TimesNRMTStd-Cond', 'Times NR Condensed', serif;
   border: transparent;
   border-bottom: 2px solid $darkGrey;
   background: transparent;
   width: 100%;
 }
 form input[type=submit] {
-  font-family: 'franklin-gothic-ext-comp-urw', sans-serif;
+  font-family: 'franklin-gothic-ext-comp-urw', 'ITCFranklinGothicStd-DmXCp', sans-serif;
   text-transform: uppercase;
   border: none;
   outline: none;
@@ -291,7 +291,7 @@ ul.emotions > li > input[type=radio] {
   padding-bottom: 48px;
 }
 .delete a {
-  font-family: 'franklin-gothic-ext-comp-urw', sans-serif;
+  font-family: 'franklin-gothic-ext-comp-urw', 'ITCFranklinGothicStd-DmXCp', sans-serif;
   text-transform: uppercase;
   border: none;
   outline: none;
