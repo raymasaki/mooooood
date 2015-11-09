@@ -320,12 +320,14 @@ ul.emotions > li > input[type=radio] {
 .moods-new .hour,
 .users-new .hour,
 .users-show .hour,
+.sessions-create .hour,
 .sessions-new .hour {
   display: none;
 }
 .moods-new .current-date,
 .users-new .current-date,
 .users-show .current-date,
+.sessions-create .current-date,
 .sessions-new .current-date {
   display: none;
 }
