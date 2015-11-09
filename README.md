@@ -22,6 +22,7 @@ Mooooood is a generative infographic built with Ruby on Rails. The idea was to c
 - I didn't add authentication and validation
 - Probably should've added flashes to make the UX more clear
 - Initially I had a really ambitious idea for using Stellar.js and having parallaxing datapoints
+- Would've liked to have infinite scrolling (AJAX loading)
 
 ### Wireframes
 
