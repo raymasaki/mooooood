@@ -25,6 +25,7 @@ Mooooood is a generative infographic built with Ruby on Rails. The idea was to c
 
 ### Wireframes
 
+https://github.com/raymasaki/mooooood/blob/master/Mooooood_wireframe.pdf
 
 ### User Stories
 - As a GUEST I want to: Sign up for an account
