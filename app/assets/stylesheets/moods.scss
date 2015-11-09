@@ -57,7 +57,7 @@ h1.current-date {
   letter-spacing: -2px;
   text-align: center;
   position: fixed;
-  bottom: 0;
+  bottom: 6px;
   width: 100%;
   text-align: center;
   pointer-events: none;
@@ -121,13 +121,13 @@ span.about-btn {
   font-size: 18px;
   color: $midGrey;
   display: inline-block;
-  line-height: 20px;
-  width: 26px;
+  line-height: 23px;
+  width: 27px;
   border-radius: 18px;
   border: 2px solid $midGrey;
   position: absolute;
   right: -40px;
-  padding-top: 4px;
+  padding-top: 2px;
   top: 16px;
   background: transparent;
   transition: all 0.2s;
@@ -138,7 +138,7 @@ span.about-btn:hover {
   transition: all 0.2s;
 }
 span.about-btn > strong {
-  margin-left: -2px;
+  margin-left: -1px;
 }
 #about {
   position: fixed;
